@@ -75,6 +75,11 @@ function tryGitInit(appPath) {
   }
 }
 
+// CARBON
+function carbonDirections() {
+  console.log(chalk.yellow('Carbon React Scripts – Adds electron support'));
+}
+
 module.exports = function(
   appPath,
   appName,
@@ -255,6 +260,8 @@ module.exports = function(
     );
   }
   console.log();
+  // CARBON
+  carbonDirections();
   console.log('Happy hacking!');
 };
 

@@ -256,7 +256,8 @@ function verifyTypeScriptSetup() {
   if (!fs.existsSync(paths.appTypeDeclarations)) {
     fs.writeFileSync(
       paths.appTypeDeclarations,
-      `/// <reference types="react-scripts" />${os.EOL}`
+      // CARBON
+      `/// <reference types="carbon-react-scripts" />${os.EOL}`
     );
   }
 }
