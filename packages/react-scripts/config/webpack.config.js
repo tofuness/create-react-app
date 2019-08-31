@@ -696,16 +696,23 @@ module.exports = function(webpackEnv) {
     ].filter(Boolean),
     // Some libraries import Node modules but don't use them in the browser.
     // Tell Webpack to provide empty mocks for them so importing them works.
-    node: {
-      module: 'empty',
-      dgram: 'empty',
-      dns: 'mock',
-      fs: 'empty',
-      http2: 'empty',
-      net: 'empty',
-      tls: 'empty',
-      child_process: 'empty',
-    },
+    // If we're targeting electron, don't stub them.
+    node:
+      process.env.TARGET_ELECTRON === 'true'
+        ? undefined
+        : {
+            module: 'empty',
+            dgram: 'empty',
+            dns: 'mock',
+            fs: 'empty',
+            http2: 'empty',
+            net: 'empty',
+            tls: 'empty',
+            child_process: 'empty',
+          },
+    // Change target to electron via TARGET_ELECTRON env variable
+    target:
+      process.env.TARGET_ELECTRON === 'true' ? 'electron-renderer' : 'web',
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
     performance: false,
