@@ -75,9 +75,9 @@ function tryGitInit(appPath) {
   }
 }
 
-// CARBON
-function carbonDirections() {
-  console.log(chalk.yellow('Carbon React Scripts – Adds electron support'));
+// SELDOM
+function seldomDirections() {
+  console.log(chalk.yellow('Seldom React Scripts – Adds electron support'));
 }
 
 module.exports = function(
@@ -278,8 +278,8 @@ module.exports = function(
     );
   }
   console.log();
-  // CARBON
-  carbonDirections();
+  // SELDOM
+  seldomDirections();
   console.log('Happy hacking!');
 };
 

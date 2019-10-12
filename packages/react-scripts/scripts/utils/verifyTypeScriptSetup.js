@@ -256,8 +256,8 @@ function verifyTypeScriptSetup() {
   if (!fs.existsSync(paths.appTypeDeclarations)) {
     fs.writeFileSync(
       paths.appTypeDeclarations,
-      // CARBON
-      `/// <reference types="carbon-react-scripts" />${os.EOL}`
+      // SELDOM
+      `/// <reference types="seldom-react-scripts" />${os.EOL}`
     );
   }
 }

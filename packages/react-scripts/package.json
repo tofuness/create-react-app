@@ -1,7 +1,7 @@
 {
-  "name": "carbon-react-scripts",
+  "name": "seldom-react-scripts",
   "version": "1.1.0",
-  "description": "(3.1.1) Configuration and scripts for Create React App customized for Carbon.",
+  "description": "(3.2.0) Custom configuration and scripts for Create React App.",
   "repository": {
     "type": "git",
     "url": "https://github.com/tofuness/create-react-app.git",
